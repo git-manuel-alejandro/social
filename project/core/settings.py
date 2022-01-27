@@ -77,10 +77,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': env.db('DATABASE_URL', default="postgres:///social")
+# }
+# DATABASES["default"]["ATOMIC_REQUESTS"] = True
+
 DATABASES = {
-    'default': env.db('DATABASE_URL', default="postgres:///social")
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'social',
+        'USER' : 'postgres',
+        'PASSWORD' : '64117500',
+        'HOST' : 'localhost',
+        'PORT' : '5432'
+    }
 }
-DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 
 # Password validation

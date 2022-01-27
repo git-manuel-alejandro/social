@@ -10,13 +10,17 @@
     <title>Document</title>
 </head>
 <body>
-    {% block navbar %}
-    {% endblock %}
+    {% block navbar %}{% endblock %}
 
+    {% block left_sidebar %}{% endblock left_sidebar %}
 
+    {% block content %} {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    {% block right_sidebar %}{% endblock right_sidebar %}
+
+    {% block footer %}{% endblock footer %}
+
+    {% block javascript %}{% endblock javascript %}
     
 </body>
 </html>
